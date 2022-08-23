@@ -2,14 +2,10 @@
 
 def uppercase(str):
     l_str = len(str)
+    tmp = str
 
     for i in range(l_str):
         if ord(str[i]) >= ord('a') and ord(str[i]) <= ord('z'):
-            end = '' if i != l_str - 1 else '\n'
-            print("{}".format(chr(ord(str[i]) - 32)), end=end)
-        else:
-            end = '' if i != l_str - 1 else '\n'
-            print("{}".format(str[i]), end=end)
+            tmp = tmp[:i] + chr(ord(str[i]) - 32) + tmp[i + 1:]
 
-    if str == "":
-        print("")
+    print("{}".format(tmp))
