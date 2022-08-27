@@ -20,4 +20,4 @@ if __name__ == "__main__":
         elif op == "*":
             print("{} {} {} = {}".format(a, op, b, mul(a, b)))
         elif op == "/":
-                print("{} {} {} = {}".format(a, op, b, div(a, b)))
+            print("{} {} {} = {}".format(a, op, b, div(a, b)))
