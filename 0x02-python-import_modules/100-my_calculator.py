@@ -13,12 +13,11 @@ if __name__ == "__main__":
         if op != '+' and op != '-' and op != '*' and op != '/':
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
-        match op:
-            case "+":
-                print("{} {} {} = {}".format(a, op, b, add(a, b)))
-            case "-":
-                print("{} {} {} = {}".format(a, op, b, sub(a, b)))
-            case "*":
-                print("{} {} {} = {}".format(a, op, b, mul(a, b)))
-            case "/":
+        if op == "+":
+            print("{} {} {} = {}".format(a, op, b, add(a, b)))
+        elif op == "-":
+            print("{} {} {} = {}".format(a, op, b, sub(a, b)))
+        elif op == "*":
+            print("{} {} {} = {}".format(a, op, b, mul(a, b)))
+        elif op == "/":
                 print("{} {} {} = {}".format(a, op, b, div(a, b)))
