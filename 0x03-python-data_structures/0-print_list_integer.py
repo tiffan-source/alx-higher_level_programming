@@ -2,5 +2,5 @@
 
 def print_list_integer(my_list=[]):
     for i in my_list:
-        str = "{number:d}"
+        str = "{number:n}"
         print(str.format(number = i))
