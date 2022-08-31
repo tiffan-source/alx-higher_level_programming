@@ -6,8 +6,8 @@ def best_score(a_dictionary):
         if len(lst_s) == 0:
             return (None)
         else:
-            a = a_dictionary[lst_s[0]]
+            a = lst_s[0]
             for i in lst_s:
-                if a < a_dictionary[i]:
-                    a = a_dictionary[i]
+                if a_dictionary[a] < a_dictionary[i]:
+                    a = i
             return (a)
