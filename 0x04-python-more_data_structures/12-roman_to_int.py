@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
         for i in roman_string:
             result += lst[i]
             if (lst[i] > prev):
-            result -= prev * 2
+                result -= prev * 2
             prev = lst[i]
         return result
     else:
