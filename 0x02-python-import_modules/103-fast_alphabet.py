@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-a = 'a', 'b'
-print(a)
+import string
+print(string.ascii_uppercase)
