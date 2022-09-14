@@ -4,7 +4,7 @@
 File descrie a square class
 """
 
-class Squar:
+class Square:
     """Class Square to represente a square and implement some method
     It will be more describe late
     """
