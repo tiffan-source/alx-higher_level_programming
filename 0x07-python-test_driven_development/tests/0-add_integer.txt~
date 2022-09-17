@@ -1,0 +1,15 @@
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	6
+	>>> add_integer(5, -4)
+	1
+	>>> isinstance(add_integer(43, 5.76), int)
+	True
+	>>> add_integer('43', 34)
+	Taceback (most recent call last)
+	   ...
+	TypeError: can only concatenate str (not "int") to str
+	>>> add_integer(43, '43')
+	Taceback (most recent call last)
+	   ...
+	TypeError: b must be an integer
