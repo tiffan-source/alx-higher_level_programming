@@ -6,5 +6,6 @@ that is empty for now
 It must implement some function like area
 """
 
+
 class Rectangle:
     pass
