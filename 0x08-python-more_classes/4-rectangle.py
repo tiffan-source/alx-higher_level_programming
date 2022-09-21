@@ -64,4 +64,4 @@ class Rectangle:
             return rslt
 
     def __repr__(self):
-        return f"Rectangle({self.width:d} ,{self.height:d})"
+        return f"Rectangle({self.width:d}, {self.height:d})"
