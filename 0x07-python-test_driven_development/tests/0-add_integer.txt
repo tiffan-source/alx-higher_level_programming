@@ -8,10 +8,16 @@
 >>> add_integer(100.3, -2)
 98
 >>> add_integer(4, "School")
-Taceback (most recent call last):
-...
+Traceback (most recent call last):
+   ...
 TypeError: b must be an integer
 >>> add_integer(None)
-Taceback (most recent call last):
-...
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+>>> isinstance(add_integer(5), int)
+True
+>>> add_integer("tjt", 465)
+Traceback (most recent call last):
+   ...
 TypeError: a must be an integer

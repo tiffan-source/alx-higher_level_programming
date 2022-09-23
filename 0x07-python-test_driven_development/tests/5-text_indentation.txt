@@ -1,0 +1,22 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(54)
+Traceback (most recent call last):
+   ...
+TypeError: text must be a string
+>>> text_indentation("")
+>>> text_indentation("Bonjour.Tout?Le:monde")
+Bonjour.
+<BLANKLINE>
+Tout?
+<BLANKLINE>
+Le:
+<BLANKLINE>
+monde
+>>> text_indentation("Bonjour.  Deux espace?   Apres  mon interroafat  . Merci")
+Bonjour.
+<BLANKLINE>
+Deux espace?
+<BLANKLINE>
+Apres  mon interroafat  .
+<BLANKLINE>
+Merci

@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+"""Unittest for max_integer([..])
+"""
+import unittest
+max_integer = __import__('6-max_integer').max_integer
+
+class TestMaxInteger(unittest.TestCase):
+    def test_returnNone(self):
+        self.assertEqual(max_integer([]), None)
+
+    def test_returninteger(self):
+        self.assertIsInstance(max_integer([4]), int)
+
+    def test_goodavalue(self):
+        self.assertEqual(max_integer([45, 56, 7, 23, 23, 0, 100, 100]), 100)
+
+    def test_raiseExceptionType(self):
+        with self.assertRaises(TypeError):
+            max_integer(["Bino", 54, 0])
+        with self.assertRaises(TypeError):
+            max_integer([54, None])
+        with self.assertRaises(TypeError):
+            max_integer([[], 54, 0])
