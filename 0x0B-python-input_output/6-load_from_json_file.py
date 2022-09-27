@@ -8,5 +8,5 @@ def load_from_json_file(filename):
     """ load_from_json_file - create an object from json file
     filename: file to read """
     with open(filename, "r", encoding="UTF-8") as f:
-        obj = f.readlines()
+        obj = f.readline()
         return json.loads(obj)
