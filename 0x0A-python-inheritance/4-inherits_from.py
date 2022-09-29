@@ -8,9 +8,6 @@ def inherits_from(obj, a_cls):
     inherits_from - return True if the object is
     sub instance of the specified class and false otherwise
     """
-    try:
-        if issubclass(obj, a_cls):
-            return True
-        return False
-    except TypeError:
-        return False
+    if issubclass(obj.__class__, a_cls):
+        return True
+    return False
