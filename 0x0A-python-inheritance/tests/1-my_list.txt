@@ -1,0 +1,30 @@
+>>> MyList =  __import__('1-my_list').MyList
+>>> isinstance(MyList(), MyList)
+True
+>>> lst = MyList()
+>>> lst.append(43)
+>>> lst.append(3)
+>>> lst.append(143)
+>>> lst.append(433)
+>>> lst.append(39)
+>>> lst.append(0)
+>>> lst.print_sorted()
+[0, 3, 39, 43, 143, 433]
+>>> lst
+[43, 3, 143, 433, 39, 0]
+>>> lst = MyList()
+>>> lst = MyList()
+>>> lst.append(1)
+>>> lst.append(2)
+>>> lst.append(1)
+>>> lst.append(2)
+>>> lst.print_sorted()
+[1, 1, 2, 2]
+>>> lst.append("data")
+>>> lst.print_sorted()
+Traceback (most recent call last):
+   ...
+TypeError: '<' not supported between instances of 'int' and 'str'
+>>> lst = MyList()
+>>> lst.print_sorted()
+[]
