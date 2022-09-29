@@ -8,7 +8,9 @@ def is_kind_of_class(obj, a_cls):
     an instance o sub instance of the specified class and false otherwise
     """
     try:
-        if type(obj) in [a_cls] or isinstance(obj, a_cls) or issubclass(obj, a_cls):
+        if type(obj) in [a_cls] or isinstance(obj, a_cls):
+            return True
+        elif issubclass(obj, a_cls):
             return True
         return False
     except TypeError:
