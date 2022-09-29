@@ -3,6 +3,7 @@
 
 
 class MyList(list):
+    """ class MyList extend list and implement print_sorted """
     def __init__(self):
         super().__init__()
 
