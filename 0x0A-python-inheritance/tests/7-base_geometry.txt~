@@ -1,0 +1,19 @@
+>>> BaseGeometry =  __import__('7-base_geometry').BaseGeometry
+>>> form = BaseGeometry()
+>>> form.integer_validator("test", "not number")
+Traceback (most recent call last):
+   ...
+TypeError: test must be an integer
+>>> form.integer_validator("test", -199)
+Traceback (most recent call last):
+   ...
+TypeError: test must be greater than 0
+>>> form.integer_validator("test", 100)
+>>> form.integer_validator("test", 45.43)
+Traceback (most recent call last):
+   ...
+TypeError: test must be an integer
+>>> form.integer_validator("", 45.43)
+Traceback (most recent call last):
+   ...
+TypeError: must be an integer
