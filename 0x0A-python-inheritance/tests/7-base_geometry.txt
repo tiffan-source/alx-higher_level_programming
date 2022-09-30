@@ -7,7 +7,7 @@ TypeError: test must be an integer
 >>> form.integer_validator("test", -199)
 Traceback (most recent call last):
    ...
-TypeError: test must be greater than 0
+ValueError: test must be greater than 0
 >>> form.integer_validator("test", 100)
 >>> form.integer_validator("test", 45.43)
 Traceback (most recent call last):
@@ -20,4 +20,8 @@ TypeError:  must be an integer
 >>> form.integer_validator("", 0)
 Traceback (most recent call last):
    ...
-TypeError:  must be greater than 0
+ValueError:  must be greater than 0
+>>> form.integer_validator("", bool)
+Traceback (most recent call last):
+   ...
+TypeError:  must be an integer
