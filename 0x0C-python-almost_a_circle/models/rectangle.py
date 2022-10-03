@@ -82,7 +82,12 @@ class Rectangle(Base):
         """
         display - print a rectangle
         """
+        for i in range(self.y):
+            print("", end="\n")
+
         for i in range(self.height):
+            for x in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end="")
             print("", end="\n")
