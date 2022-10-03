@@ -101,13 +101,25 @@ class Rectangle(Base):
         b = f" - {self.width}/{self.height}"
         return a + b
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update - update informtaion about rectangle
         args: list of parameter to set
         """
         lgt = len(args)
 
+        if (lgt == 0):
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
         if lgt >= 1:
             self.id = args[0]
         if lgt >= 2:
