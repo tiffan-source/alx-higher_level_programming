@@ -29,7 +29,7 @@ class Rectangle_Test(unittest.TestCase):
         self.assertIsNotNone(models.rectangle.__doc__)
 
     def test_init_doc(self):
-        self.assertIsNotNone(Rectangle.__init__)
+        self.assertIsNotNone(Rectangle.__init__.__doc__)
 
     def test_attribute_height(self):
         self.assertEqual(self.obj.height, 30)
