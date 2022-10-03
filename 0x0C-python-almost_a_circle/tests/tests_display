@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+import unittest
+from models.rectangle import Rectangle
+
+
+class Display_Test(unittest.TestCase):
+
+    def test_doc_display(self):
+        self.assertIsNotNone(Rectangle.display.__doc__)

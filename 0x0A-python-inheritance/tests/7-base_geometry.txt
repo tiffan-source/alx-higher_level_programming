@@ -25,7 +25,11 @@ ValueError:  must be greater than 0
 Traceback (most recent call last):
    ...
 TypeError:  must be an integer
->>> form.integer_validator()
+>>> try:
+...	form.integer_validator()
+... except TypeError:
+>>> 	   print("Musr have two argument")
+
 Traceback (most recent call last):
    ...
 TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
