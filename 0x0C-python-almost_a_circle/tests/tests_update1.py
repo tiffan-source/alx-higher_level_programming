@@ -3,6 +3,7 @@ import unittest
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class Update_Tests(unittest.TestCase):
 
     def test_doc_present(self):

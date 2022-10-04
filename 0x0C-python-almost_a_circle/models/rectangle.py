@@ -130,3 +130,17 @@ class Rectangle(Base):
             self.x = args[3]
         if lgt >= 5:
             self.y = args[4]
+
+    def to_dictionary(self):
+        """
+        to_dictionary - return all property of rectangle in dictionary form
+        """
+
+        dct = {}
+        dct["id"] = self.id
+        dct["width"] = self.width
+        dct["height"] = self.height
+        dct["x"] = self.x
+        dct["y"] = self.y
+
+        return dct

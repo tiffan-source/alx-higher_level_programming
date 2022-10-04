@@ -58,3 +58,16 @@ class Square(Rectangle):
             self.x = args[2]
         if lgt >= 4:
             self.y = args[3]
+
+    def to_dictionary(self):
+        """
+        to_dictionary - return all property of square in dictionary form
+        """
+
+        dct = {}
+        dct["id"] = self.id
+        dct["size"] = self.size
+        dct["x"] = self.x
+        dct["y"] = self.y
+
+        return dct
