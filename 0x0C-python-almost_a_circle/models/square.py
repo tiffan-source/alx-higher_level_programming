@@ -55,6 +55,6 @@ class Square(Rectangle):
         if lgt >= 2:
             self.size = args[1]
         if lgt >= 3:
-            self.x = args[3]
+            self.x = args[2]
         if lgt >= 4:
-            self.y = args[4]
+            self.y = args[3]
