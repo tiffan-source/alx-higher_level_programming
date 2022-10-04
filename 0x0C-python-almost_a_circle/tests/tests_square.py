@@ -48,3 +48,16 @@ class Square_Test(unittest.TestCase):
     def test_display_square(self):
         sqrt = Square(34, 89, 90, 120)
         self.assertEqual(str(sqrt), "[Square] (120) 89/90 - 34")
+
+    def test_set_size_no_error(self):
+        sqrt = Square(34, 89, 90, 120)
+        sqrt.size = 500
+        self.assertEqual(sqrt.width, 500)
+        self.assertEqual(sqrt.height, 500)
+
+    def test_set_size_error(self):
+        sqrt = Square(34, 89, 90, 120)
+        with self.assertRaises(TypeError):
+            sqrt.size = "Bonjour"
+        with self.assertRaises(ValueError):
+            sqrt.size = -400
