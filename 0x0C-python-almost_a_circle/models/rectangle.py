@@ -19,8 +19,8 @@ class Rectangle(Base):
         call init of parent class to init id
         """
         super().__init__(id)
-        self.height = height
         self.width = width
+        self.height = height
         self.x = x
         self.y = y
 
