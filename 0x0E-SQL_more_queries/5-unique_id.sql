@@ -8,6 +8,6 @@
 
 CREATE TABLE IF NOT EXISTS `unique_id`
 (
-	`int` INT DEFAULT 1 UNIQUE,
+	`id` INT DEFAULT 1 UNIQUE,
 	`name` VARCHAR(256)
 )
