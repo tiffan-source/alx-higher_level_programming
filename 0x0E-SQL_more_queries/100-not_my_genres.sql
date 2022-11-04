@@ -8,8 +8,15 @@
 --     You can use a maximum of two SELECT statement
 --     The database name will be passed as an argument of the mysql command
 
-SELECT name
-FROM `tv_genres` AS `tg`
-LEFT JOIN `tv_show_genres` AS `tsg`
-ON `tsg`.`genre_id` = `tg`.`id`
-WHERE `tsg`.`genre_id` IS NULL;
+SELECT `name`
+FROM `tv_genres`
+WHERE `name`
+NOT IN (SELECT `tv_genres`.`name` AS name
+FROM `tv_show_genres`
+INNER JOIN `tv_shows`
+ON `tv_show_genres`.`show_id` = `tv_shows`.`id`
+INNER JOIN `tv_genres`
+ON `tv_show_genres`.`genre_id` = `tv_genres`.`id`
+WHERE `tv_shows`.`title` = 'Dexter'
+ORDER BY `tv_genres`.`name`)
+ORDER BY `name`;
