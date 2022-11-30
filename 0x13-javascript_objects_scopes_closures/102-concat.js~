@@ -1,0 +1,8 @@
+#!/usr/bin/node
+
+const {readFileSync, writeFile} = require('fs');
+
+let text1 = readFileSync(process.argv[2]);
+let text2 = readFileSync(process.argv[3]);
+
+writeFile(process.argv[4], text1 + text2, (data)=>{});
