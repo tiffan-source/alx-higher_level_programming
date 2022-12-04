@@ -11,8 +11,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
     curs = db.cursor()
     query = "SELECT * FROM `states`\
-        WHERE `states`.`name` = '{:s}'\
-        ORDER BY `states`.`id`".format(sys.argv[4])
+        WHERE `states`.`name` = '{name}'\
+        ORDER BY `states`.`id`".format(name=str(sys.argv[4]))
     curs.execute(query)
     rows = curs.fetchall()
     for row in rows:
