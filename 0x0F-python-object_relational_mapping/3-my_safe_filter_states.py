@@ -12,8 +12,8 @@ if __name__ == "__main__":
     curs = db.cursor()
     query = """SELECT * FROM `states`\
         WHERE `states`.`name` = %s\
-        ORDER BY `states`.`id`""", (str(sys.argv[4],))
-    curs.execute(query)
+        ORDER BY `states`.`id`"""
+    curs.execute(query, (sys.argv[4],))
     rows = curs.fetchall()
     for row in rows:
         print(row)
